@@ -1,19 +1,19 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.sidebar-layout{
+.sidebar-layout {
   width: 280px;
-  height: 100vh;
+  min-height: 100vh;
   padding: 48px 28px;
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
   background-color: #191919;
 }
+
 .logo-menu{
   height: 440px;
   display: flex;

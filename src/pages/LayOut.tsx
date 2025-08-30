@@ -8,6 +8,7 @@ const LayOut = () => {
   const [date, setDate] = useState("");
   const [label, setLabel] = useState("");
   const [active, setActive] = useState(false);
+  const { user } = useUser();
 
   useEffect(() => {
     const today = new Date().toDateString();
@@ -26,36 +27,44 @@ const LayOut = () => {
       setActive(false);
     }
   };
-  const { user } = useUser();
 
   return (
-    <div style={{}}>
-      <div style={{ display: "flex", height: "100vh" }}>
-        <Sidebar />
-        <div style={{ flex: 1, backgroundColor: "#F4F5F7" }}>
-          <section className="header-outlet">
-            <section className="header-date">
-              <section
-                className={active ? "header-active" : "header-click"}
-                onClick={onClick}
-              >
-                <label className="headerClick">{">"}</label>
-              </section>
-              <section className={active ? "label-active" : "label-not"}>
-                <label className="header-label">{label}</label>
-              </section>
+    <div style={{ display: "flex", minHeight: "100vh" }}>
+      <Sidebar />
+      <div
+        style={{
+          flex: 1,
+          backgroundColor: "#F4F5F7",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <section className="header-outlet">
+          <section className="header-date">
+            <section
+              className={active ? "header-active" : "header-click"}
+              onClick={onClick}
+            >
+              <label className="headerClick">{">"}</label>
+            </section>
+            <section className={active ? "label-active" : "label-not"}>
+              <label className="header-label">{label}</label>
             </section>
           </section>
-          <section
-            style={{
-              paddingTop: "16px",
-              paddingLeft: "24px",
-              paddingRight: "32px",
-            }}
-          >
-            <Outlet />
-          </section>
-        </div>
+        </section>
+        <section
+          style={{
+            flex: 1,
+            minHeight: 0,
+            overflowY: "auto",
+            paddingTop: "16px",
+            paddingLeft: "24px",
+            paddingRight: "32px",
+            paddingBottom: "34px",
+          }}
+        >
+          <Outlet />
+        </section>
       </div>
     </div>
   );

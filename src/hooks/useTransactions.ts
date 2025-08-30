@@ -11,6 +11,7 @@ type Transaction = {
   transactionType: string,
   ammount: number,
   currencyId: string,
+  receipt:string,
   paymentMethod: string,
   isActive: boolean
 
@@ -29,7 +30,7 @@ function useTransaction() {
       setLoading(true);
     try {
       const res = await axiosInstance.get("/transactions", {
-        headers: { token:token }, 
+        headers: { token }, 
       });
       const getTransactions = res.data ?? [];
       setTransactions(getTransactions);
@@ -77,7 +78,7 @@ function useTransaction() {
       setLoading(true);
     try {
       const res = await axiosInstance.get(`/transactions/${transactionType}`, {
-        headers: { token:token }, 
+        headers: { token }, 
       });
       const getTransactions = res.data ?? [];
       setTransactionsType(getTransactions);

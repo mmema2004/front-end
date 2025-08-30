@@ -1,0 +1,190 @@
+
+.transaction-details {
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+ 
+}
+
+.balance-details {
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.account-details-title,
+.transaction-details-title {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 32px;
+  color: #878787;
+}
+
+.account-details {
+  height: 292px;
+  border-radius: 8px;
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 20px 25px 0px #4C67641A;
+}
+
+.details-section {
+  max-width: 850px;
+  width: 100%;
+  height: 132px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.details-top {
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.details-bottom {
+  max-width: 513px;
+  width: 100%;
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.account-divs {
+  height: 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.account-titles {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #9F9F9F;
+}
+
+.account-infos {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #525256;
+}
+
+.account-buttons {
+  max-width: 256px;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.account-edits {
+  max-width: 160px;
+  width: 100%;
+  height: 48px;
+  border-radius: 4px;
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  background-color: #299D91;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+
+.account-remove {
+  border: none;
+  background-color: #FFFFFF;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #666666;
+}
+
+.transaction-section {
+  border-radius: 16px;
+  padding: 4px 32px 40px 32px;
+  box-shadow: 0px 20px 25px 0px #4C67641A;
+  background-color: #FFFFFF;
+
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.transaction-header,
+.transaction-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+}
+
+.transaction-header {
+  height: 64px;
+  border-bottom: 1px solid #D2D2D240;
+  padding: 0 16px;
+  font-weight: bold;
+}
+
+.transaction-body {
+ 
+  max-height: 600px; 
+  overflow-y: auto;
+  margin-bottom: 32px; 
+}
+
+.transaction-row {
+  height: 56px;
+  border-bottom: 1px solid #D2D2D240;
+  padding: 0 16px;
+}
+
+.transaction-btn {
+  width: 192px;
+  height: 48px;
+  border-radius: 4px;
+  padding: 12px 24px;
+  display: flex;
+  gap: 4px;
+  background-color: #299D91;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  cursor: pointer;
+}

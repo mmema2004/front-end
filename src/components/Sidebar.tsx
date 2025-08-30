@@ -128,22 +128,27 @@ const Sidebar = () => {
             className="profile-link"
           >
             <section
-              style={{
-                display: "flex",
-                alignItems: "center",
-                height: "40px",
-              }}
+              style={{ display: "flex", alignItems: "center", height: "40px" }}
             >
               <section className="profile-img">
-                {user.image && (
+                {user.image ? (
                   <img
                     src={user.image}
                     alt="Profile"
                     style={{
                       width: "32px",
                       height: "32px",
-                      borderRadius: "40px",
+                      borderRadius: "50%",
                       objectFit: "cover",
+                    }}
+                  />
+                ) : (
+                  <div
+                    style={{
+                      width: "32px",
+                      height: "32px",
+                      borderRadius: "50%",
+                      backgroundColor: "#999",
                     }}
                   />
                 )}

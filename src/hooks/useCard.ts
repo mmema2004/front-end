@@ -21,11 +21,11 @@ function useCard() {
   const [loading, setLoading] = useState(true);
 
   const fetchCards = useCallback(async () => {
-    if (!token) return; // guard if token not loaded
+    if (!token) return; 
     setLoading(true);
     try {
       const res = await axiosInstance.get("/bankaccount", {
-        headers: { token },
+         headers: { token },
       });
       setCards(res.data ?? []);
     } catch (error: any) {
@@ -61,11 +61,32 @@ function useCard() {
     [token]
   );
 
+    const removeCard = useCallback(
+    async (id: number) => {
+      if (!token) return;
+      setLoading(true);
+      try {
+        const res = await axiosInstance.delete(`/bankaccount/${id}`, {
+          headers: { token },
+        });
+        setCard(null);
+      } catch (error: any) {
+       
+          error.response?.status === 401 ||
+          error.response?.data === "Invalid Token"
+        
+      } finally {
+        setLoading(false);
+      }
+    },
+    [token]
+  );
+
   useEffect(() => {
     fetchCards();
   }, [fetchCards]); 
 
-  return { cards, fetchCards, loading, fetchCard, card };
+  return { cards, fetchCards, loading, fetchCard, card ,removeCard};
 }
 
 export default useCard;

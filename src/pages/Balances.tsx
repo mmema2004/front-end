@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "../css/Balances.css";
 
 const Balances = () => {
-  const { cards, fetchCards, loading } = useCard()!;
+  const { cards, fetchCards, loading, removeCard } = useCard()!;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -35,7 +35,12 @@ const Balances = () => {
                     </section>
                   </section>
                   <section className="balances-footer">
-                    <p className="balances-remove-btn">Remove</p>
+                    <p
+                      className="balances-remove-btn"
+                      onClick={() => removeCard(Number(card.id))}
+                    >
+                      Remove
+                    </p>
                     <button
                       className="balances-detail-btn"
                       onClick={() => navigate(`${card.id}`)}
@@ -48,13 +53,17 @@ const Balances = () => {
             );
           })
         ) : loading ? (
-          <p>loading...</p>
+          <section className="balances">
+            <p>loading...</p>
+          </section>
         ) : (
-          <p>no card found</p>
+          <section className="balances">
+            <p>no card found</p>
+          </section>
         )}
-        <section className="balances">
-          <button>Add Accounts</button>
-          <button>Edit Accounts</button>
+        <section className="balances-add-edit">
+          <button className="balances-add-btn">Add Accounts</button>
+          <button className="balances-edit-btn">Edit Accounts</button>
         </section>
       </section>
     </section>
