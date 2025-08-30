@@ -7,6 +7,7 @@ import { Link } from "react-router";
 import { axiosInstance } from "../util/axios";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import "../css/ForgetPassword.css";
 
 const forgetPassword: Omit<UserformProp, "control">[] = [
   {
@@ -38,32 +39,45 @@ const ForgetPassword = () => {
   });
 
   return (
-    <div>
-      <Logo />
-      <div>
-        <div>
-          <p>Forgot password?</p>
-          <p>Enter your email address to get the password reset link</p>
-        </div>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div>
-            {forgetPassword.map((input) => (
-              <InputForm
-                key={input.validatingName}
-                {...input}
-                control={control}
+    <section className="container">
+      <div className="forget-page">
+        <div className="body-forget">
+          <div className="forget">
+            <Logo />
+            <div className="forget-title">
+              <label className="forget-title1">Forgot password?</label>
+
+              <label className="forget-title2">
+                Enter your email address to get the password reset link
+              </label>
+            </div>
+            <form className="forget-submit" onSubmit={handleSubmit(onSubmit)}>
+              <div className="forget-form">
+                {forgetPassword.map((input) => (
+                  <InputForm
+                    key={input.validatingName}
+                    {...input}
+                    control={control}
+                  />
+                ))}
+              </div>
+              <Button
+                name={"Password Reset"}
+                backgroundColor="var(--primary-background)"
+                textColor="var(--fourth-color)"
+                border="none"
+                width="400px"
               />
-            ))}
-            <Button
-              name={"Password Reset"}
-              backgroundColor={""}
-              textColor={""}
-            />
+            </form>
           </div>
-          <Link to={"/login"}>Back to login</Link>
-        </form>
+          <div className="link-login">
+            <Link to={"/login"} className="link-label">
+              Back to login
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

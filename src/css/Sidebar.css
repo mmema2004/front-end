@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar-layout{
+  width: 280px;
+  height: 100vh;
+  padding: 48px 28px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  background-color: #191919;
+}
+.logo-menu{
+  height: 440px;
+  display: flex;
+  gap:40px;
+  flex-direction: column;
+}
+.logo-sidebar{
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 8%;
+  color: #FFF;
+}
+.menu{
+ height: 368px;
+ gap:16px;
+ display: flex;
+ flex-direction: column;
+}
+
+.sidebar-link{
+height: 48px;
+border-radius: 4px;
+padding: 12px 16px;
+display: flex;
+flex-direction: row;
+ 
+  align-items: center;
+gap:12px;
+}
+.notactive-icon{
+  width: 24px;
+  height: 24px;
+  color: #FFFFFFB2;
+}
+.notactive-label{
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFFB2;
+}
+.active-link{
+height: 48px;
+border-radius: 4px;
+padding: 12px 16px;
+display: flex;
+flex-direction: row;
+background-color: #299D91; 
+border: none;
+  align-items: center;
+gap:12px;
+}
+.active-icon{
+  width: 24px;
+  height: 24px;
+  color:#FFFFFF;
+}
+.active-label{
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.footer{
+  height: 196px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  justify-content: space-between;
+
+}
+.logout-button{
+  height: 48px;
+  border-radius: 4px;
+  padding: 12px 16px;
+  display: flex;
+  gap:12px;
+  background-color: #FFFFFF14;
+  border:none;
+  
+  align-items: center;
+}
+.logout-icon{
+  width: 20px;
+  height: 20px;
+  color: #FFFFFF;
+}
+.logout-label{
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.profile-link{
+height: 104px;
+border-top: 1px solid #FFFFFF14;
+padding: 32px 0;
+display: flex;
+flex-direction: row;
+gap: 16px;
+}
+.profile-img{
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  justify-content: center;
+}
+.profile-label-button{
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.user-name{
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFF;
+}
+.view-profile{
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFFB2;
+}

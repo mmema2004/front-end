@@ -1,0 +1,68 @@
+
+.container{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 400px;
+  min-width: 280px;
+  gap: 40px;
+  max-height: 596px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-login {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.login-submit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.create-div {
+  display: flex;
+  justify-content: center;
+}
+
+.createAcc {
+  text-decoration: none;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--primary_color);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+

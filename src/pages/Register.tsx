@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useNavigate } from "react-router-dom";
 import { axiosInstance } from "../util/axios";
 import Button from "../components/Button";
+import "../css/Register.css";
 
 const registerForm: Omit<UserformProp, "control">[] = [
   {
@@ -17,7 +18,7 @@ const registerForm: Omit<UserformProp, "control">[] = [
   {
     labelName: "Email Address",
     typeform: "text",
-    placeholderLabel: "Your email address",
+    placeholderLabel: "Your email",
     validatingName: "email",
   },
   {
@@ -48,47 +49,64 @@ const Register = () => {
 
   const onSubmit = async (data: any) => {
     try {
-      const res = await axiosInstance.post("/users", data);
+      const res = await axiosInstance.post("/register", {
+        name: data.name,
+        email: data.email,
+        password: data.password,
+        username: "",
+        phone_number: 0,
+        image: "",
+      });
       console.log(res.data);
       navigate("/login");
     } catch (err: any) {
-      if (err.response?.status === 400) {
-        console.log(
-          err.response.data.message || "You have registered with this email"
-        );
+      if (err.response && err.response.data && err.response.data.error) {
+        console.log(err.response.data.error);
       } else {
-        console.log("Registration failed:", err.message);
+        console.log(err.message);
       }
     }
   };
 
   return (
-    <div className="register-page">
-      <div className="register">
-        <Logo />
-        <form className="register-submit" onSubmit={handleSubmit(onSubmit)}>
-          <div className="register-form">
-            {registerForm.map((register) => (
-              <InputForm
-                key={register.validatingName}
-                {...register}
-                control={control}
+    <section className="container">
+      <section className="register-page">
+        <div className="body-register">
+          <div className="register">
+            <Logo />
+            <div style={{ justifyContent: "center", display: "flex" }}>
+              <label className="create-acc">Create an Account</label>
+            </div>
+
+            <form className="register-submit" onSubmit={handleSubmit(onSubmit)}>
+              <div className="register-form">
+                {registerForm.map((register) => (
+                  <InputForm
+                    key={register.validatingName}
+                    {...register}
+                    control={control}
+                  />
+                ))}
+              </div>
+
+              <Button
+                name={"Sign up"}
+                backgroundColor="var(--primary-background)"
+                textColor="var(--fourth-color)"
+                border="none"
+                width="400px"
               />
-            ))}
+            </form>
           </div>
-          {/* <button type="submit" className="button" sty>
-            Register
-          </button> */}
-          <Button name={"sign up"} backgroundColor={""} textColor={""} />
-        </form>
-      </div>
-      <div>
-        <p>Already have an account?</p>
-        <Link to="/login" className="createAcc">
-          Sign in here
-        </Link>
-      </div>
-    </div>
+          <div className="login-acc">
+            <label className="have-acc">Already have an account?</label>
+            <Link to="/login" className="loginAcc">
+              Sign in here
+            </Link>
+          </div>
+        </div>
+      </section>
+    </section>
   );
 };
 

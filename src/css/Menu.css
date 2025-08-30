@@ -1,0 +1,66 @@
+.header-outlet{
+  height: 88px;
+  padding-top: 20px ;
+  padding-bottom: 20px;
+  padding-right: 32px;
+  padding-left: 24px;
+  border-bottom: 1px solid #E8E8E8;
+  display: flex;
+  align-items: center;
+}
+.header-date{
+  display: flex;
+  flex-direction: row;
+ 
+}
+.header-active{
+   width:24px;
+   position: relative;
+  height: 24px;
+  color: #9F9F9F;
+  font-family: "Inter";
+  align-self: right;
+  transition: left 0.1s ease; 
+  left: 80px;
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.header-click{
+  width:24px;
+  position: relative;
+  height: 20px;
+  color: #9F9F9F;
+  font-family: "Inter";
+transition: left 0.1s ease; 
+  left: 0;
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.label-active{
+position: relative;
+transition: left 0.3s ease; 
+right: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.label-not{
+position: relative;
+transition: left 0.3s ease; 
+right: 0px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.header-label{
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9F9F9F;
+}

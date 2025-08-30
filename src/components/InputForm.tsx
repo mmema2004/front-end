@@ -1,5 +1,6 @@
 import { Controller } from "react-hook-form";
 import { Link } from "react-router-dom";
+import "../css/Inputform.css";
 
 export type UserformProp = {
   labelName: string;
@@ -22,11 +23,15 @@ const InputForm = ({
     <div className="inputform">
       <div className="label-row">
         <label className="name-label">{labelName}</label>
-        {login === "loginpassword" ? (
-          <Link to="/forget">Forgot Password?</Link>
-        ) : (
-          ""
-        )}
+        <section className="forgot-row">
+          {login === "loginpassword" ? (
+            <Link to="/forget" className="forgot-label">
+              Forgot Password?
+            </Link>
+          ) : (
+            ""
+          )}
+        </section>
       </div>
       <Controller
         name={validatingName}
@@ -42,7 +47,9 @@ const InputForm = ({
               className="input"
               placeholder={placeholderLabel ?? ""}
             />
-            <p className="error">{fieldState.error?.message || "\u00A0"}</p>
+            <label className="error">
+              {fieldState.error?.message || "\u00A0"}
+            </label>
           </>
         )}
       />

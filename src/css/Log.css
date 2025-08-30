@@ -1,0 +1,12 @@
+@import "./Global.css";
+
+.title-label{
+  font-family: "Poppins";
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 32px;
+  letter-spacing: 8%;
+  color: var(--primary_color);
+  margin: 0px;
+
+}

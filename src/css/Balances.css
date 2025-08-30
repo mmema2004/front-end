@@ -1,0 +1,120 @@
+.balances-section{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.balances-title{
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 32px;
+  color: #878787;
+}
+.balances{
+  max-width: 352px;
+  width: 100%;
+  height: 288px;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 20px 25px 0px #4C67641A;
+}
+.balances-header{
+  height: 44px;
+  border-bottom: 1px solid #D2D2D240;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.balances-card-type{
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #878787;
+  text-transform: capitalize;
+}
+
+.balances-bankName{
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: #666666;
+}
+
+.balances-content{
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.balances-details{
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.balances-AccNumber{
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  gap:4px
+}
+.balances-Acc{
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #191919;
+  text-transform: capitalize;
+}
+.Acc-title{
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9F9F9F;
+}
+.balances-balance{
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  gap:4px
+}
+.balance-num{
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: #191919;
+}
+.balance-title{
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color:#9F9F9F;
+}
+.balances-footer{
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.balances-remove-btn{
+  font-family: "Inter";
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #299D91;
+}
